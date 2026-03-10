@@ -130,11 +130,10 @@ label {
     font-weight: 500;
     color: #75B06F;
     text-decoration: none;
-    transition: opacity .2s;
 }
 
 .forgot:hover {
-    opacity: .75;
+    text-decoration: underline;
     color: #75B06F;
 }
 
@@ -159,4 +158,5 @@ label {
         padding: 28px 24px 36px;
         border-radius: 12px;
     }
+
 }

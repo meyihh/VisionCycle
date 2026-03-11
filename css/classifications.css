@@ -1,0 +1,153 @@
+/* ================================
+   VisionCycle – Classifications CSS
+   ================================ */
+
+* { font-family: 'Roboto', sans-serif; box-sizing: border-box; }
+
+body { background: #FBFDF9; margin: 0; }
+
+/* ── Main ── */
+.main-wrapper  { margin-left: 247px; padding: 36px 32px 60px; }
+.page-title    { font-size: 36px; font-weight: 700; color: #75B06F; line-height: 42px; }
+.page-subtitle { font-size: 20px; color: #4C4C4C; margin-top: 4px; margin-bottom: 24px; }
+
+/* ── Controls Row ── */
+.controls-row {
+    display: flex; align-items: center;
+    gap: 16px; margin-bottom: 12px; flex-wrap: wrap;
+}
+
+/* Search */
+.search-wrap {
+    display: flex; align-items: center; gap: 9px;
+    padding: 9px 13px; background: #fff;
+    border: 1px solid #B3B3B3; border-radius: 8px;
+    width: 425px; height: 40px;
+}
+.search-wrap input {
+    border: none; outline: none; background: transparent;
+    font-size: 16px; color: #000; width: 100%;
+}
+.search-wrap input::placeholder { color: rgba(0,0,0,.5); }
+.search-wrap:focus-within {
+    border: 2px solid #75B06F;
+    box-shadow: none;
+    background: #F8F9FA;
+}
+
+/* Category dropdown */
+.cat-select {
+    height: 40px; padding: 3px 36px 3px 14px;
+    background: #fff; border: 1px solid #B3B3B3;
+    border-radius: 8px; font-size: 16px; color: #000;
+    appearance: none; cursor: pointer; min-width: 197px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center;
+}
+.cat-select:focus {
+    border: 2px solid #75B06F;
+    box-shadow: none;
+    background-color: #F8F9FA;
+    outline: none;
+}
+
+/* Pagination */
+.pagination-wrap {
+    display: flex; align-items: center; gap: 6px;
+    margin-left: auto; flex-wrap: wrap;
+}
+.page-btn {
+    display: flex; align-items: center; justify-content: center;
+    min-width: 32px; height: 32px; padding: 0 10px;
+    border-radius: 5px; font-size: 16px; cursor: pointer;
+    border: none; background: transparent; color: #1E1E1E;
+    transition: background .15s;
+}
+.page-btn:hover  { background: #e4ede4; }
+.page-btn.active { background: #0088FF; color: #fff; }
+.page-gap { font-size: 16px; font-weight: 700; padding: 0 2px; color: #000; }
+.prev-next {
+    display: flex; align-items: center; gap: 6px;
+    color: #757575; font-size: 16px; padding: 0 12px;
+}
+.prev-next.disabled { opacity: .5; pointer-events: none; }
+.prev-next:hover:not(.disabled) { background: #e4ede4; color: #555; }
+
+/* Showing results */
+.showing-text { font-size: 16px; color: #4C4C4C; margin-bottom: 16px; }
+
+/* ── Waste Cards Grid ── */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.waste-card {
+    background: #fff;
+    border: 2px solid #D9D9D9;
+    box-shadow: 0 1px 5px rgba(0,0,0,.25);
+    border-radius: 8px; overflow: hidden;
+    cursor: pointer;
+}
+.waste-card:hover { border: 2px solid #75B06F; }
+
+.waste-card-img  { width: 100%; height: 140px; object-fit: cover; display: block; border-radius: 4px 4px 0 0; }
+.waste-card-body { padding: 10px 12px 12px; }
+.waste-card-name { font-size: 16px; font-weight: 500; color: #4C4C4C; margin-bottom: 8px; }
+.waste-card-user { font-size: 14px; color: #4C4C4C; margin-top: 8px; }
+
+/* Badges */
+.badge-recyclable {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 4px 10px; font-size: 12px; color: #076C19;
+    background: rgba(99,189,115,.3); border: 1px solid #63BD73; border-radius: 100px;
+}
+.badge-non-recyclable {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 4px 10px; font-size: 12px; color: #9C1E1E;
+    background: rgba(255,75,75,.3); border: 1px solid #FF4B4B; border-radius: 100px;
+}
+.badge-compostable {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 4px 10px; font-size: 12px; color: #9F6726;
+    background: rgba(245,182,111,.3); border: 1px solid #F5B66F; border-radius: 100px;
+}
+
+/* ── Detail Modal ── */
+.modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.45); z-index: 200;
+    align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+    background: #fff; border-radius: 12px;
+    width: 660px; max-width: 95vw;
+    padding: 24px 28px 28px;
+    box-shadow: 0 8px 32px rgba(0,0,0,.18);
+}
+
+.modal-header {
+    display: flex; justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.modal-close {
+    font-size: 22px; color: #555;
+    background: none; border: none; cursor: pointer; line-height: 1;
+    padding: 0;
+}
+.modal-close:hover { color: #000; }
+.modal-img {
+    width: 100%; max-height: 300px;
+    object-fit: contain; border-radius: 8px;
+    margin-bottom: 20px; display: block;
+}
+.modal-info-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+}
+.modal-info-row   { font-size: 16px; color: #333; }
+.modal-info-row b { font-weight: 700; }

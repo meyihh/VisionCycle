@@ -1,0 +1,95 @@
+/* ── Logout Modal Overlay ── */
+.logout-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+.logout-overlay.show {
+    display: flex;
+}
+
+/* ── Modal Box ── */
+.logout-modal {
+    position: relative;
+    width: 413px;
+    height: 263px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Title */
+.logout-modal .modal-title {
+    position: absolute;
+    width: 76px;
+    height: 28px;
+    left: calc(50% - 76px / 2 - 0.5px);
+    top: 38px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/* Message */
+.logout-modal .modal-message {
+    position: absolute;
+    width: 290px;
+    height: 23px;
+    left: calc(50% - 290px / 2 - 0.5px);
+    top: 108px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/* No Button */
+.logout-modal .btn-no {
+    position: absolute;
+    width: 124px;
+    height: 48px;
+    left: 61px;
+    top: 178px;
+    background: #D9D9D9;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #4C4C4C;
+    transition: background .15s;
+}
+
+/* Yes Button */
+.logout-modal .btn-yes {
+    position: absolute;
+    width: 124px;
+    height: 48px;
+    left: 227px;
+    top: 178px;
+    background: #75B06F;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: background .15s;
+}

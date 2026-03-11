@@ -1,0 +1,106 @@
+/* ================================
+   VisionCycle – User Details Modal CSS
+   ================================ */
+
+/* ── Modal Overlay ── */
+.modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.45); z-index: 200;
+    align-items: center; justify-content: center;
+}
+.modal-overlay.active { display: flex; }
+
+.modal-box {
+    background: #fff; border-radius: 15px;
+    width: 697px; max-width: 95vw; max-height: 90vh;
+    overflow-y: auto;
+    padding: 36px 50px 40px;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,.18);
+    scrollbar-width: thin;
+    scrollbar-color: #BEBEBE #D9D9D9;
+}
+.modal-box::-webkit-scrollbar        { width: 12px; }
+.modal-box::-webkit-scrollbar-track  { background: #D9D9D9; border-radius: 10px; margin: 25px 0; }
+.modal-box::-webkit-scrollbar-thumb  { background: #BEBEBE; border-radius: 10px; }
+.modal-box::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
+.modal-box::-webkit-scrollbar-button:start:decrement,
+.modal-box::-webkit-scrollbar-button:end:increment,
+.modal-box::-webkit-scrollbar-button:vertical:start:increment,
+.modal-box::-webkit-scrollbar-button:vertical:end:decrement { display: none; height: 0; }
+
+.modal-close {
+    position: absolute; top: 22px; right: 24px;
+    font-size: 22px; color: #1D1B20;
+    background: none; border: none; cursor: pointer; line-height: 1;
+}
+.modal-close:hover { color: #000; }
+
+.modal-title {
+    font-size: 20px; font-weight: 600; color: #75B06F;
+    text-align: center; margin-bottom: 24px;
+}
+
+/* User info grid */
+.user-info-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 14px 60px; margin-bottom: 24px;
+}
+.user-info-row      { font-size: 14px; font-weight: 500; color: #4C4C4C; }
+.user-info-row span { font-weight: 400; }
+
+.section-title { font-size: 14px; font-weight: 500; color: #4C4C4C; margin-bottom: 12px; }
+
+/* Classification history table */
+.history-table-wrap {
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0,0,0,.25);
+    border-radius: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: #BEBEBE #D9D9D9;
+}
+.history-table-wrap::-webkit-scrollbar        { width: 12px; }
+.history-table-wrap::-webkit-scrollbar-track  { background: #D9D9D9; border-radius: 10px; margin: 25px 0; }
+.history-table-wrap::-webkit-scrollbar-thumb  { background: #BEBEBE; border-radius: 10px; }
+.history-table-wrap::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
+.history-table-wrap::-webkit-scrollbar-button:start:decrement,
+.history-table-wrap::-webkit-scrollbar-button:end:increment,
+.history-table-wrap::-webkit-scrollbar-button:vertical:start:increment,
+.history-table-wrap::-webkit-scrollbar-button:vertical:end:decrement { display: none; height: 0; }
+
+.history-table { width: 100%; border-collapse: collapse; }
+.history-table thead th {
+    background: #90AB8B; color: #fff;
+    font-size: 14px; font-weight: 600; text-transform: uppercase;
+    text-align: center; padding: 10px; border: 1px solid #D9D9D9;
+}
+.history-table tbody td {
+    text-align: center; font-size: 14px;
+    padding: 10px; border: 1px solid #D9D9D9;
+}
+
+.cat-recyclable     { color: #076C19; }
+.cat-non-recyclable { color: #9C1E1E; }
+.cat-compostable    { color: #F08D1C; }
+
+/* Modal footer pagination */
+.modal-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 8px;
+}
+.showing-entries  { font-size: 14px; color: #4C4C4C; }
+.modal-pagination { display: flex; align-items: center; gap: 3px; }
+.mpg-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 5px;
+    font-size: 12px; font-weight: 500; cursor: pointer;
+    border: none; background: transparent; color: #1E1E1E;
+    transition: background .15s;
+}
+.mpg-btn:hover    { background: #e4ede4; }
+.mpg-btn.active   { background: #C7C7CC; color: #2C2C2C; }
+.mpg-btn.disabled { opacity: .4; pointer-events: none; }
+.mpg-gap          { font-size: 12px; font-weight: 500; padding: 0 2px; }
